@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 15th Birthday Nimu</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:Arial,sans-serif;
+    color:white;
+    background:linear-gradient(to bottom,#050816,#0d1b3d);
+    overflow-x:hidden;
+}
+.stars{
+    position:fixed; inset:0;
+    background-image:
+      radial-gradient(2px 2px at 20% 30%,white,transparent),
+      radial-gradient(2px 2px at 80% 20%,white,transparent),
+      radial-gradient(1px 1px at 50% 60%,white,transparent),
+      radial-gradient(2px 2px at 70% 80%,white,transparent),
+      radial-gradient(1px 1px at 10% 70%,white,transparent);
+    animation: twinkle 5s infinite alternate;
+    z-index:-1;
+}
+@keyframes twinkle{from{opacity:.5}to{opacity:1}}
+.moon{
+    width:180px;height:180px;border-radius:50%;
+    background:#f5f3ce;
+    box-shadow:0 0 50px #fff8b0;
+    margin:40px auto;
+}
+.hero{text-align:center;padding:20px}
+.hero h1{font-size:3rem}
+.hero p{font-size:1.2rem;margin-top:10px}
+.section{max-width:1000px;margin:auto;padding:40px 20px}
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+.gallery img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 0 20px rgba(255,255,255,.2);
+}
+.letter{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(8px);
+padding:25px;
+border-radius:20px;
+line-height:1.8;
+}
+button{
+padding:15px 25px;
+border:none;
+border-radius:30px;
+font-size:1rem;
+cursor:pointer;
+margin-top:20px;
+}
+#surprise{
+display:none;
+text-align:center;
+padding:60px 20px;
+font-size:1.4rem;
+}
+.heart{
+position:fixed;
+font-size:24px;
+animation: float 4s linear forwards;
+}
+@keyframes float{
+from{transform:translateY(0);opacity:1}
+to{transform:translateY(-500px);opacity:0}
+}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+
+<div class="hero">
+<div class="moon"></div>
+<h1>Happy 15th Birthday, Nimu 🌙✨</h1>
+<p>Your first birthday with us together 💖</p>
+<audio controls autoplay loop>
+  <source src="sanctuary.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div class="section">
+<h2>Our Little Memory Journey 📸</h2><br>
+<div class="gallery">
+<img src="photo1.jpg" alt="Memory 1">
+<img src="photo2.jpg" alt="Memory 2">
+<img src="photo3.jpg" alt="Memory 3">
+<img src="photo4.jpg" alt="Memory 4">
+<img src="photo5.jpg" alt="Memory 5">
+</div>
+</div>
+
+<div class="section">
+<div class="letter">
+<h2>To My Pyarooo Nimu 💌</h2><br>
+<p>
+Heyyyy babeeee, it’s your birthday and yk what is special about this day it’s your first birthday with us together 😝,
+and I hope we can celebrate your birthday for the eternity of our life ☹️💋.
+I am so sooo sooooo happy that it’s your birthday I can’t explain babe,
+my words ain’t enough to explain how much I love you 😘❤️,
+I love from the moon to the stars and back and will keep on loving you 💋💋.
+Even if I get angry or be grumpy towards you, just know I do this because I am completely comfortable and in love with you.
+Anyways, it’s your 15th birthday and I hope we can celebrate your birthday till my last breath...
+<br><br>
+Once again,
+<b>HAPPIESTTTTTT BIRTHHHHDAYYYYYYY TOOOOO MYYYYYYY PYAROOOOOO NIMUUUUUUUUU 💋✨💖</b>
+<br><br>
+May God bless you. 💖✨
+<br><br>
+<b>ILOVEEEYOUUUSOOSOOSOOSOSSOOOOOOOOOMUCHHHHHU 💋💕</b>
+</p>
+
+<button onclick="showSurprise()">Open Final Surprise 🎁</button>
+</div>
+</div>
+
+<div id="surprise">
+<h1>🌙✨ Happy Birthday Nimu ✨🌙</h1>
+<p>
+Thank you for being part of my life.<br>
+Thank you for every smile, every laugh, every memory.<br><br>
+I love you from the moon to the stars and back. 💖
+</p>
+</div>
+
+<script>
+function showSurprise(){
+ document.getElementById("surprise").style.display="block";
+ for(let i=0;i<60;i++){
+   let h=document.createElement("div");
+   h.className="heart";
+   h.innerHTML="💖";
+   h.style.left=Math.random()*100+"vw";
+   h.style.top="90vh";
+   document.body.appendChild(h);
+   setTimeout(()=>h.remove(),4000);
+ }
+ window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
